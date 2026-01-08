@@ -19,7 +19,7 @@ import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 function SampleNextArrow({ onClick }) {
   return (
     <div
-      className="absolute -top-20 right-8 bg-gray-300 rounded-full p-4 cursor-pointer"
+      className="absolute -top-20 right-5 bg-gray-300 rounded-full p-4 cursor-pointer"
       onClick={onClick}
     >
       <FaArrowRight />
@@ -116,7 +116,10 @@ const FlashSales = () => {
           </button>
         </div>
 
-        <div className="w-full mx-auto h-px bg-gray-300 mb-20"></div>
+        <div className="container mx-auto px-4">
+        <div className="h-px bg-gray-300 my-20"></div>
+       </div>
+
       </Container>
     </>
   );

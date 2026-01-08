@@ -72,7 +72,7 @@ const BestSellingProducts = () => {
             heading="Best Selling Products"
           />
           <div className="self-end">
-            <button className="bg-primary py-4 px-12 text-white">
+            <button className="bg-primary py-4 px-12 mr-4.5 text-white">
               View All
             </button>
           </div>
