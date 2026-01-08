@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { countDownDateAndTime } from 'countdown-date-time';  
-import Flex from '../common/Flex.jsx';
+import Flex from '../Components/Flex';
 const CountDown = ({className}) => {
 
  const conduct_date = '2026-01-01 23:59:59';

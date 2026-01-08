@@ -1,5 +1,5 @@
-    import Container from '../common/Container'
-    import Flex from '../common/Flex'
+    import Container from '../Components/Container'
+    import Flex from '../Components/Flex'
     import { IoIosArrowForward } from "react-icons/io";
     import Slider from "react-slick";
     import "slick-carousel/slick/slick.css";

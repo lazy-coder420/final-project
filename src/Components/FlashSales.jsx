@@ -1,25 +1,25 @@
-import React from 'react'
-import Container from '../src/common/Container'
-import SectionHeading from '../src/common/SectionHeading'
-import Card from '../src/common/Card' 
-import Cardimg1 from '../src/assets/cardimg1.png'  
-import Cardimg2 from '../src/assets/cardimg2.png'  
-import Cardimg3 from '../src/assets/cardimg3.png'  
-import Cardimg4 from '../src/assets/cardimg4.png'  
+import React from 'react';
+import Container from '../Components/Container';
+import SectionHeading from '../Components/SectionHeading';
+import Card from '../Components/Card';
+
+import Cardimg1 from '../assets/cardimg1.png';
+import Cardimg2 from '../assets/cardimg2.png';
+import Cardimg3 from '../assets/cardimg3.png';
+import Cardimg4 from '../assets/cardimg4.png';
+
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import CountDown from '../src/CountDown'
-import { FaArrowRight } from "react-icons/fa";
-import { FaArrowLeft } from "react-icons/fa";
 
+import CountDown from '../Components/CountDown';
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
-function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
+/* ---------- Slider Arrows ---------- */
+function SampleNextArrow({ onClick }) {
   return (
     <div
-      className="absolute -top-20 right-8 bg-gray-300 rounded-full p-4"
-      // style={{ ...style, display: "block", background: "red" }}
+      className="absolute -top-20 right-8 bg-gray-300 rounded-full p-4 cursor-pointer"
       onClick={onClick}
     >
       <FaArrowRight />
@@ -27,12 +27,10 @@ function SampleNextArrow(props) {
   );
 }
 
-function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
+function SamplePrevArrow({ onClick }) {
   return (
     <div
-      className="absolute -top-20 right-23 bg-gray-300 rounded-full p-4"
-      // style={{ ...style, display: "block", background: "green" }}
+      className="absolute -top-20 right-20 bg-gray-300 rounded-full p-4 cursor-pointer"
       onClick={onClick}
     >
       <FaArrowLeft />
@@ -40,10 +38,9 @@ function SamplePrevArrow(props) {
   );
 }
 
-
-
-const Flash = () => {
-   const settings = {
+/* ---------- FlashSales Component ---------- */
+const FlashSales = () => {
+  const settings = {
     dots: false,
     infinite: true,
     slidesToShow: 4,
@@ -56,151 +53,73 @@ const Flash = () => {
         settings: {
           slidesToShow: 4,
           slidesToScroll: 4,
-          infinite: true,
-          dots: true
-        }
+        },
       },
       {
-        breakpoint:992,
+        breakpoint: 992,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
-          initialSlide: 3
-        }
+        },
       },
       {
-        breakpoint:768,
+        breakpoint: 768,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          initialSlide: 3
-        }
+        },
       },
       {
         breakpoint: 576,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
+
   return (
-<>
-<Container>
-<div className='mt-37.5 mb-10 flex gap-22'> 
-    <SectionHeading 
-    title="Today's" 
-    heading="Flash Sales" />
-    <CountDown  className='self-end'/>
-    </div>
-</Container>
+    <>
+      {/* Heading & Countdown */}
+      <Container>
+        <div className="mt-37.5 mb-10 flex gap-22">
+          <SectionHeading title="Today's" heading="Flash Sales" />
+          <CountDown className="self-end" />
+        </div>
+      </Container>
 
+      {/* Slider */}
+      <Container>
+        <Slider {...settings}>
+          {[Cardimg1, Cardimg2, Cardimg3, Cardimg4, Cardimg1, Cardimg2, Cardimg3, Cardimg4].map(
+            (img, index) => (
+              <div key={index}>
+                <Card
+                  photosrc={img}
+                  title="HAVIT HV-G92 Gamepad"
+                  discount="120"
+                  price="160"
+                  review="88"
+                  Percentage="40"
+                  btn="Add to Cart"
+                />
+              </div>
+            )
+          )}
+        </Slider>
 
-<Container>
- <div className="slider-container">
+        {/* Button */}
+        <div className="pl-112.5 mb-15">
+          <button className="bg-primary py-4 px-12 text-white mt-10">
+            View All Products
+          </button>
+        </div>
 
-<Slider {...settings}>
-  <div>
-    <Card
-      photosrc={Cardimg1}
-      title="HAVIT HV-G92 Gamepad"
-      discount="120"
-      price="160"
-      review="88"  
-      Percentage="40"
-      btn="Add to Cart"
-    />
-  </div>
-  <div>
-    <Card
-      photosrc={Cardimg2}
-      title="HAVIT HV-G92 Gamepad"
-      discount="120"
-      price="160"
-      review="88"  
-      Percentage="40"
-      btn="Add to Cart"
-    />
-  </div>
-  <div>
-    <Card
-      photosrc={Cardimg3}
-      title="HAVIT HV-G92 Gamepad"
-      discount="120"
-      price="160"
-      review="88"  
-      Percentage="40"
-      btn="Add to Cart"
-    />
-  </div>
-    <div>
-    <Card
-      photosrc={Cardimg4}
-      title="HAVIT HV-G92 Gamepad"
-      discount="120"
-      price="160"
-      review="88"  
-      Percentage="40"
-      btn="Add to Cart"
-    />
-  </div>
-  <div>
-    <Card
-      photosrc={Cardimg1}
-      title="HAVIT HV-G92 Gamepad"
-      discount="120"
-      price="160"
-      review="88"  
-      Percentage="40"
-      btn="Add to Cart"
-    />
-  </div>
-  <div>
-    <Card
-      photosrc={Cardimg2}
-      title="HAVIT HV-G92 Gamepad"
-      discount="120"
-      price="160"
-      review="88"  
-      Percentage="40"
-      btn="Add to Cart"
-    />
-  </div>
-  <div>
-    <Card
-      photosrc={Cardimg3}
-      title="HAVIT HV-G92 Gamepad"
-      discount="120"
-      price="160"
-      review="88"  
-      Percentage="40"
-      btn="Add to Cart"
-    />
-  </div>
-    <div>
-    <Card
-      photosrc={Cardimg4}
-      title="HAVIT HV-G92 Gamepad"
-      discount="120"
-      price="160"
-      review="88"  
-      Percentage="40"
-      btn="Add to Cart"
-    />
-  </div>
+        <div className="w-full mx-auto h-px bg-gray-300 mb-20"></div>
+      </Container>
+    </>
+  );
+};
 
-
-</Slider>
-</div>
-<div className='pl-112.5 mb-15'>
-<button className='bg-primary py-4 px-12 cursor-pointer text-white mt-10'>View All Products</button>
-</div>
-  <div className="w-full mx-auto h-px bg-gray-300 mb-20"></div>
-</Container>
-
-</>
-  )
-}
-
-export default Flash
+export default FlashSales;

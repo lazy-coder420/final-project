@@ -1,12 +1,12 @@
 import React from 'react'
-import Container from '../Components/Container'
-import SectionHeading from '../Components/SectionHeading'
+import Container from './Container'
+import SectionHeading from './SectionHeading'
 import { FaArrowRight } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
 import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-import CardCategories from '../Components/CardCategories';
+import CardCategories from './CardCategories';
 
 
 

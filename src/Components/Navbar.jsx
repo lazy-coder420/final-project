@@ -1,6 +1,6 @@
 import React from 'react'
-import Container from '../common/Container';
-import Flex from '../common/Flex';
+import Container from '../Components/Container';
+import Flex from '../Components/Flex';
 import Nlogo from '../assets/Nlogo.png';
 import { HiMagnifyingGlass } from "react-icons/hi2";
 

@@ -7,9 +7,9 @@ import { FaArrowLeft } from "react-icons/fa";
 import Container from '../Components/Container';
 import Card from '../Components/Card';
 import SectionHeading from '../Components/SectionHeading';
-import Letop1 from './assets/Letop1.png'
-import Letop2 from './assets/Letop2.png'
-import Letop3 from './assets/Letop3.png'
+import Letop1 from '../assets/Letop1.png'
+import Letop2 from '../assets/Letop2.png'
+import Letop3 from '../assets/Letop3.png'
 
 
 function SampleNextArrow(props) {

@@ -1,10 +1,10 @@
 import React from 'react'
 import Container from '../Components/Container'
 import SectionHeading from '../Components/SectionHeading'
-import Ps1 from './assets/Ps1.png'
-import Ps2 from './assets/Ps2.png'
-import Ps3 from './assets/Ps3.png'
-import Ps4 from './assets/Ps4.png'
+import Ps1 from '../assets/Ps1.png'
+import Ps2 from '../assets/Ps2.png'
+import Ps3 from '../assets/Ps3.png'
+import Ps4 from '../assets/Ps4.png'
 import Flex from '../Components/Flex'
 
 

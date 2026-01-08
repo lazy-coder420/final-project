@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaStar } from "react-icons/fa";
-import Flex from '..Components/Flex'
+import Flex from '../Components/Flex'
 import { FaRegHeart } from "react-icons/fa";
 import { LiaEye } from "react-icons/lia";
 
